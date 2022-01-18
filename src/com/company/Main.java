@@ -50,6 +50,10 @@ public class Main {
     }
     public static String reversedString2(String s)
     {
+        if(s==null || s.isEmpty())
+        {
+            return s;
+        }
         StringBuilder reversed = new StringBuilder(s);
         return reversed.reverse().toString();
     }
