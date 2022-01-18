@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Locale;
+
 public class Main {
     public static boolean isPsswordComplex(String s)
     {
@@ -57,6 +59,29 @@ public class Main {
         StringBuilder reversed = new StringBuilder(s);
         return reversed.reverse().toString();
     }
+    public static String reverseEachWord(String s)
+    {
+        String outputString="";
+        if(s==null || s.isEmpty())
+        {
+            return s;
+        }
+        String[] inputWords= s.split("\\s");
+        for(int i=0;i<inputWords.length;i++)
+        {
+            String word = inputWords[i];
+            for(int j = word.length()-1; j>=0; j--)
+            {
+                outputString+=(word.charAt(j));
+            }
+            if(i!=inputWords.length-1)
+            {
+                outputString+=" ";
+            }
+        }
+        return outputString;
+
+    }
     public static void main(String[] args) {
 //        System.out.println(isPsswordComplex("Abc@123"));
 //        System.out.println(isPsswordComplex("abc@123"));
@@ -66,7 +91,8 @@ public class Main {
 //        System.out.println(isAtEvenIndex("HeLLo",'H'));
 //        System.out.println(isAtEvenIndex("",'L'));
 //        System.out.println(isAtEvenIndex(null,'L'));
-          System.out.println(reversedString("Hello World!")); //!dlroW olleH
-          System.out.println(reversedString2("Hello World!"));
+//          System.out.println(reversedString("Hello World!")); //!dlroW olleH
+//          System.out.println(reversedString2("Hello World!"));
+         System.out.println(reverseEachWord("Hello World!"));
     }
 }
