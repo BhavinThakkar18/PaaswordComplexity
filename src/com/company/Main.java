@@ -48,6 +48,11 @@ public class Main {
         }
         return reversed.toString();
     }
+    public static String reversedString2(String s)
+    {
+        StringBuilder reversed = new StringBuilder(s);
+        return reversed.reverse().toString();
+    }
     public static void main(String[] args) {
 //        System.out.println(isPsswordComplex("Abc@123"));
 //        System.out.println(isPsswordComplex("abc@123"));
@@ -58,5 +63,6 @@ public class Main {
 //        System.out.println(isAtEvenIndex("",'L'));
 //        System.out.println(isAtEvenIndex(null,'L'));
           System.out.println(reversedString("Hello World!")); //!dlroW olleH
+          System.out.println(reversedString2("Hello World!"));
     }
 }
